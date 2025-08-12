@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"net/http"
+
+	"github.com/emekaony/backend_programming/src/utils"
 )
 
 func handler(w http.ResponseWriter, r *http.Request) {
@@ -20,9 +22,13 @@ func main() {
 	// fmt.Println("Starting server on port 8080")
 	// http.ListenAndServe(":8080", nil)
 
-	mp := map[string]int{
-		"Emeka": 23,
+	idx := 10
+
+	for idx > 0 {
+		fmt.Println("Index:", idx)
+		idx--
 	}
-	mp["chidera"] = 34
-	fmt.Println(mp)
+
+	result := utils.Add(1, 2)
+	fmt.Println(result)
 }
