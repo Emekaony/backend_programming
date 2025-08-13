@@ -21,7 +21,4 @@ func simpleHttp() {
 	http.ListenAndServe(":8080", nil)
 }
 
-func main() {
-	simpleHttp()
-	// utils.Run()
-}
+func main() {}
