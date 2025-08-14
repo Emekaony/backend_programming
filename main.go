@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"net/http"
+
+	"github.com/emekaony/backend_programming/src/concurrency"
 )
 
 func simpleHttp() {
@@ -21,4 +23,6 @@ func simpleHttp() {
 	http.ListenAndServe(":8080", nil)
 }
 
-func main() {}
+func main() {
+	concurrency.Run()
+}
